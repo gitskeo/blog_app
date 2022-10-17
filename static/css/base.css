@@ -1,16 +1,28 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
+    background-color: azure;
 }
 
 header {
     border-bottom: 1px solid #999;
     margin-bottom: 2rem;
     display: flex;
+    background-color: aliceblue;
 }
 
 header h1 a {
-    color: red;
+    color: green;
+    text-decoration: none;
+}
+
+header h4 a {
+    color: green;
+    text-decoration: none;
+}
+
+header h3 a {
+    color: green;
     text-decoration: none;
 }
 
@@ -25,10 +37,12 @@ header h1 a {
 
 .post-entry {
     margin-bottom: 2rem;
+    margin-right: auto;
 }
 
 .post-entry h2 {
     margin: 0.5rem 0;
+    margin-right: auto;
 }
 
 .post-entry h2 a,
@@ -43,5 +57,9 @@ header h1 a {
 }
 
 .post-entry h2 a:hover {
-    color: red;
+    color: maroon;
+}
+
+.background {
+    background-color: whitesmoke;
 }

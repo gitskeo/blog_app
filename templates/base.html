@@ -4,27 +4,43 @@
     <title>Django blog</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <!-- bootstrap library  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   </head>
-  <body>
-    <header>
-      <div class="nav-left">
-        <h1><a href="{% url 'home' %}">Django blog</a></h1>
-      </div>
-      <div class="nav-right">
-        <a href="{% url 'post_new' %}">+ New Blog Post</a>
-      </div>
-    </header>
+    <header class = "header">
+    <div class = "container-fluid"> 
+      <div class = "row align-items-center">
+        <div class="col">
+        <h1><a href="{% url 'home' %}"><strong>Django The Parselmouth</strong></a></h1>
+        </div>
+          <div class="col-5">
+        <h1><a href="{% url 'post_new' %}"><strong>Add a Blogpost</strong></a><h1>
+          </div>
+            <div class = "col">
     {% if user.is_authenticated %}
-    <p>Hi {{ user.username }}!</p>
-    <p><a href= "{% url 'logout' %}"> Log Out </a> </p>
+    <h3><a>Hi {{ user.username }}!</a></h3>
+            </div>
+              <div class = "col">
+    <h3><a href= "{% url 'logout' %}"><strong> Log Out </strong> </a> </h3>
+              </div>
     {% else %}
-    <p>You are not logged in</p>
-    <a href="{% url 'login' %}">Log In</a>
-    <a href="{% url 'signup' %}">Sign Up</a>
+                <div class = "col">
+    <h3><a>You are not logged in</a></h3>
+                </div>
+                  <div class = "col">
+    <h4><a href="{% url 'login' %}"><button type ="button" class ="btn btn-primary">Log In</button></a></h1>
+                  </div>
+                    <div class = "col">
+    <h4><a href="{% url 'signup' %}"><button type = "button" class ="btn btn-primary"> Sign Up </button> </a></h1>
+                    </div>
     {% endif %}
-    <div>
+      </div>
+    </div>
+    </header>
+
       {% block content %}
       {% endblock content %}
-    </div>
-  </body>
+
+
 </html>

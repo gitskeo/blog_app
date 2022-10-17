@@ -1,12 +1,26 @@
+<html class = "background">
 {% extends "base.html" %}
 
 {% block content %}
+<body class = "background">
   {% for post in post_list %}
-  <div class="post-entry">
+<div class = "container-xl">
+    <div class="post-entry">
     <h2>
         <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
     </h2>
     <p>{{ post.body }}</p>
+    </div>
   </div>
+</div>
   {% endfor %}
+</body>
 {% endblock content %}
+<footer class = "background">
+<div class = "container text-center">
+<h5> logo and info here </h5>
+<img src = "https://static.wixstatic.com/media/3f8b9e_5200a417d32e4124aa32974d4287c1db~mv2.png/v1/fill/w_209,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/LifeDynamic%20High%20Res%20PNG.png" 
+class = "img-circle" alt ="logo"> 
+</div> 
+</footer>
+</html>
