@@ -1,6 +1,8 @@
+<html class = "background">
 {% extends "base.html" %}
-
+<body class = "background">
 {% block content %}
+<div class = "background">
 <div class = "container-xl">
   <div class="post-entry">
     <h2>{{ post.title }}</h2>
@@ -10,5 +12,7 @@
 <br/>
 <a href= "{% url 'post_delete' post.pk %}"><button class = "btn btn-outline-primary"> Delete Post </button></a>
 </div>
-
+</div>
+</body>
 {% endblock content %}
+</html>

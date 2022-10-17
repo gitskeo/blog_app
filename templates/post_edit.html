@@ -1,9 +1,19 @@
+<html class ="backgroud">
 {% extends "base.html" %}
+<body class = "backgroud">
+
 {% block content %}
-<h1>Edit post</h1>
+<div class "container-xxl">
+        <div class = "backgroud">
+<h1 class = "display-5">Edit post</h1>
 <form action="" method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Update" />
+
+        </div>
+</div>
 </form>
+       
+</body> 
 {% endblock content %}
